@@ -87,6 +87,19 @@ body {
   border-bottom-right-radius: 5px;
 }
 
+.highlight {
+  display: block;
+  position: absolute;
+  height: 80px;
+  width: 300px;
+  top: -10px;
+  border-radius: 50%;
+  transition: 0.3s ease all; /*všechny změny stavu jsou animované s 0.3s rychlostí*/
+  opacity: 0.4;
+  pointer-events: none; /* zajistí, aby šlo kliknout na a pod ním */
+  background: radial-gradient(rgba(157, 128, 238, 1), rgba(157, 128, 238, 0));
+}
+
 /**
  * Add your highlight code here
  */
