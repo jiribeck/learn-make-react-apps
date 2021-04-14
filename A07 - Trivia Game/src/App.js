@@ -54,7 +54,12 @@ export default function App() {
       {/* question footer ----------------------- */}
       <div className="question-footer">
         <div>
-          <button onClick={handleNextQuestion}>Go to next question 👉</button>
+          <button onClick={handleNextQuestion}>
+            Go to next question{' '}
+            <span role="img" aria-label="next">
+              👉
+            </span>
+          </button>
         </div>
       </div>
     </div>
