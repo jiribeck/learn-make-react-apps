@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import useInterval from '@use-it/interval';
+
 import './App.css';
+import Message from './components/message';
+import Typing from './components/typing';
 
 const messages = [
   { text: 'How do I get better at React?' },
@@ -12,15 +16,25 @@ const messages = [
 ];
 
 export default function App() {
+  const [messageToShow, setMessageToShow] = useState(0);
+
+  useInterval(() => {
+    if (messageToShow < messages.length) {
+      setMessageToShow((messageToShow) => messageToShow + 1);
+    }
+  }, 3000);
+
   return (
     <div className="app">
       <div className="walkthrough">
         {messages.map((message, index) => {
-          return (
-            <div key={index} className="message">
-              {message.text}
-            </div>
-          );
+          const even = index % 2 === 0;
+          if (messageToShow + 1 === index) {
+            return <Typing key={index} even={even} />;
+          }
+          if (index > messageToShow) return <div key={index} />;
+
+          return <Message key={index} message={message} />;
         })}
       </div>
     </div>
