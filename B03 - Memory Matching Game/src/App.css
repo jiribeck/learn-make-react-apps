@@ -7,6 +7,7 @@
 body {
   background: #19323a;
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,13 +32,13 @@ p strong {
 
 .cards {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  grid-template: repeat(3, 1fr) / repeat(8, 1fr);
   gap: 10px;
 }
 
 .pokemon-card {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   border-radius: 2px;
   cursor: pointer;
   background: none;
