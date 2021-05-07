@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { getPokemonImage } from '../hooks/usePokemons';
+import background from '../images/logo512.png';
 
 export default function PokemonCard({
   index,
@@ -27,7 +28,10 @@ export default function PokemonCard({
         <div className="front">
           <img src={getThisPokemonImage} alt={name} width="90" />
         </div>
-        <div className="back">?</div>
+        <div
+          className="back"
+          style={{ backgroundImage: `url(${background})` }}
+        />
       </div>
     </button>
   );

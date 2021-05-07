@@ -80,6 +80,9 @@ p strong {
 
 .pokemon-card .back {
   background: #ae1c35;
+  background-repeat: no-repeat;
+  background-size: 90px 90px;
+  background-position: center;
   color: #d6aeb5;
   font-size: 100px;
   transition: 0.3s ease all;
@@ -87,6 +90,9 @@ p strong {
 
 .pokemon-card .back:hover {
   background: #cc2f49;
+  background-repeat: no-repeat;
+  background-size: 90px 90px;
+  background-position: center;
   color: #fff;
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
