@@ -4,7 +4,7 @@ import './App.css';
 import { loading, getPokemons } from './hooks/usePokemons';
 import PokemonCard from './components/PokemonCard';
 
-// image for the pokemon
+// image for the pokemon done
 // https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png MAX=874
 
 const pokemons = getPokemons();
