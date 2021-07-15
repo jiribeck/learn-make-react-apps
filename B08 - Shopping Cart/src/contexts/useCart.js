@@ -27,8 +27,6 @@ function reducer(state, action) {
       };
     case 'EMPTY':
       return { cart: [] };
-      break;
-
     default:
       return state;
   }
